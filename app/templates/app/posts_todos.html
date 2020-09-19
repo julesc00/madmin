@@ -1,0 +1,88 @@
+{% load static %}
+
+{% block content %}
+
+<section class="section section-recent">
+    <div class="row">
+        <div class="col s12 m6 l8">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Recent Posts</span>
+                    <table class="striped">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Post One</td>
+                            <td>Web Development</td>
+                            <td>
+                                <a href="" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Two</td>
+                            <td>Web Development</td>
+                            <td>
+                                <a href="" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Three</td>
+                            <td>App Upgrading</td>
+                            <td>
+                                <a href="" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Four</td>
+                            <td>Graphic Design</td>
+                            <td>
+                                <a href="" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Quick Todos</span>
+                    <form action="" id="todo-form">
+                        <div class="input-field">
+                            <input id="todo" type="text" placeholder="Add todo...">
+                        </div>
+                    </form>
+                    <ul class="collection todos">
+                        <li class="collection-item">
+                            <div>Todo One
+                                <a href="#" class="secondary-content delete">
+                                <i class="material-icons">close</i>
+                            </a></div>
+                        </li>
+                        <li class="collection-item">
+                            <div>Todo Two
+                                <a href="#" class="secondary-content delete">
+                                <i class="material-icons">close</i>
+                            </a></div>
+                        </li>
+                        <li class="collection-item">
+                            <div>Todo Three
+                                <a href="#" class="secondary-content delete">
+                                <i class="material-icons">close</i>
+                            </a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
