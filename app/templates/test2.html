@@ -1,0 +1,86 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block css %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock %}
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/162ff428c2.js" crossorigin="anonymous"></script>
+
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<nav class="blue darken-2">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="{% url 'app:index' %}" class="brand-logo">
+                JDEVS Dashboard
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large right">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="{% url 'app:index' %}">Dashboard</a></li>
+                <li><a href="{% url 'app:posts' %}">Posts</a></li>
+                <li><a href="{% url 'app:categories' %}">Categories</a></li>
+                <li><a href="{% url 'app:comments' %}">Comments</a></li>
+                <li><a href="{% url 'app:users' %}">Users</a></li>
+            </ul>
+
+            <!-- SideNav -->
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="{% static 'images/ocean.jpg' %}" alt="">
+                        </div>
+                        <a href="#">
+                            <img src="{% static 'images/person1.jpg' %}" alt="" class="circle">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+{% block javascript %}
+    <!-- Compiled and minified JavaScript -->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Custom JS & JQuery here
+            $('.sidenav').sidenav()
+
+        })
+    </script>
+{% endblock %}
+
+</body>
+</html>
