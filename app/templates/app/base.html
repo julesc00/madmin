@@ -83,11 +83,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            //Custom JS & JQuery here
-            $('.sidenav').sidenav()
+        // Hide Sections
+        $('.section').hide()
 
-        })
+        setTimeout(function () {
+            $(document).ready(function () {
+                //Show Sections
+                $('.section').fadeIn();
+
+                // Hide Preloader
+                $('.loader').fadeOut();
+
+                //Custom JS & JQuery here
+                $('.sidenav').sidenav();
+
+                // Generic Counter, used as it is
+                $('.count').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 1000,
+                        easing: "swing",
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+
+            });
+        }, 1000)
+
     </script>
 {% endblock %}
 </body>
