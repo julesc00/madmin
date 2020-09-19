@@ -82,6 +82,8 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="{% static 'js/chart.js' %}"></script>
     <script type="text/javascript">
         // Hide Sections
         $('.section').hide()
@@ -108,6 +110,22 @@
                             $(this).text(Math.ceil(now));
                         }
                     });
+                });
+
+                // Comments Approve & Deny
+                $('.approve').click(function (e) {
+                    M.toast({
+                        html: "Comment approved",
+                        displayLength: 3000
+                    })
+                    e.preventDefault()
+                });
+                $('.deny').click(function (e) {
+                    M.toast({
+                        html: "Comment denied",
+                        displayLength: 3000
+                    })
+                    e.preventDefault()
                 });
 
             });
