@@ -11,4 +11,6 @@ urlpatterns = [
     path('comments/', views.comments, name="comments"),
     path('users/', views.users, name="users"),
     path('test/', views.test, name="test"),
+    path('login/', views.login, name="login"),
+    path('logout/', views.logout, name="logout"),
 ]

@@ -40,18 +40,26 @@
                     <div class="background">
                         <img src="{% static 'images/ocean.jpg' %}" alt="">
                     </div>
-                    <a href="#user"><img class="circle" src="{% static 'images/person1.jpg' %}"></a>
-                    <a href="#name"><span class="white-text name">John Doe</span></a>
-                    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                    <a href="#user"><img class="circle" src="{% static 'images/moi.png' %}"></a>
+                    <a href="#name"><span class="white-text name">Julio Briones</span></a>
+                    <a href="#email"><span class="white-text email">contact@jdevs.mx</span></a>
                 </div>
             </li>
-            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-            <li><a href="#!">Second Link</a></li>
+            <li class="active">
+                <a href="{% url 'app:index' %}">
+                    <i class="material-icons">dashboard</i>
+                    Dashboard
+                </a>
+            </li>
+            <li><a href="{% url 'app:posts' %}">Posts</a></li>
+            <li><a href="{% url 'app:categories' %}">Categories</a></li>
+            <li><a href="{% url 'app:comments' %}">Comments</a></li>
+            <li><a href="{% url 'app:users' %}">Users</a></li>
             <li>
                 <div class="divider"></div>
             </li>
-            <li><a class="subheader">Subheader</a></li>
-            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+            <li><a class="subheader">Account Controls</a></li>
+            <li><a class="waves-effect" href="{% url 'app:logout' %}">Logout</a></li>
         </ul>
 
 
