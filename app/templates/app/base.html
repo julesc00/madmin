@@ -25,14 +25,13 @@
         <div class="nav-wrapper">
       <a href="{% url 'app:index' %}" class="brand-logo">JDEVS Dashboard</a>
         <ul class="right hide-on-med-and-down">
-            <li class="active"><a href="{% url 'app:index' %}">Dashboard</a></li>
+            <li><a href="{% url 'app:index' %}">Dashboard</a></li>
             <li><a href="{% url 'app:posts' %}">Posts</a></li>
             <li><a href="{% url 'app:categories' %}">Categories</a></li>
             <li><a href="{% url 'app:comments' %}">Comments</a></li>
             <li><a href="{% url 'app:users' %}">Users</a></li>
             <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large right"><i class="material-icons">menu</i></a></li>
         </ul>
-
 
         <ul id="slide-out" class="sidenav">
             <li>
@@ -72,8 +71,7 @@
 {% endblock %}
 
 {% block javascript %}
-
-        <script
+    <script
         src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous">
@@ -83,6 +81,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
     <script src="{% static 'js/chart.js' %}"></script>
     <script type="text/javascript">
         // Hide Sections
@@ -98,6 +97,12 @@
 
                 //Custom JS & JQuery here
                 $('.sidenav').sidenav();
+
+                // Init Modal
+                $('.modal').modal();
+
+                // Init Select
+                $('select').formSelect();
 
                 // Generic Counter, used as it is
                 $('.count').each(function () {
@@ -127,6 +132,11 @@
                     })
                     e.preventDefault()
                 });
+
+                CKEDITOR.replace( 'body' );
+
+                // Modal
+                $('.fixed-action-btn').floatingActionButton();
 
             });
         }, 1000)

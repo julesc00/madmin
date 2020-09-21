@@ -2,8 +2,156 @@
 {% load static %}
 
 {% block content %}
-    <!-- Section: Other -->
 
+    <!-- Section: Posts -->
+    <section class="section section-posts grey lighten-4">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Posts</span>
+                        <table class="striped">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Date Created</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Post One</td>
+                            <td>Web Development</td>
+                            <td>June 12, 2020</td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Two</td>
+                            <td>Web Development</td>
+                            <td>July, 3, 2020</td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Three</td>
+                            <td>App Upgrading</td>
+                            <td>August 25, 2020</td>
+                            <td>
+                                <a href="" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Four</td>
+                            <td>Graphic Design</td>
+                            <td>Sept 15, 2020</td>
+                            <td>
+                                <a href="" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Five</td>
+                            <td>App Upgrading</td>
+                            <td>Sept 16, 2020</td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Post Six</td>
+                            <td>Graphic Design</td>
+                            <td>Sept 18, 2020</td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">Details</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="card-action">
+                        <ul class="pagination">
+                            <li class="disabled">
+                                <a href="#" class="blue-text">
+                                    <i class="material-icons">chevron_left</i>
+                                </a>
+                            </li>
+                            <li class="active blue lighten-2">
+                                <a href="#" class="white-text">1</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">2</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">3</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">4</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">5</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 
-    <h1>{{ message }}</h1>
+    <!-- Section: Action Button & Post Modal -->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="material-icons">add</i>
+        </a>
+    <ul>
+        <li>
+            <a href="#post-modal" class="modal-trigger btn-floating blue white-text">
+                <i class="material-icons">mode_edit</i>
+                Submit
+            </a>
+        </li>
+    </ul>
+    </div>
+
+    <!-- Section: Add Post Modal -->
+    <div id="post-modal" class="modal">
+        <div class="modal-content">
+            <h4>Add Post</h4>
+            <form action="">
+                <div class="input-field">
+                    <input type="text" id="title">
+                    <label for="title">Title</label>
+                </div>
+                <div class="input-field">
+                    <select name="" id="">
+                        <option value="" disabled selected>Select Option</option>
+                        <option value="1">App Development</option>
+                        <option value="2">Graphic Design</option>
+                        <option value="3">Tech Development</option>
+                        <option value="4">Other</option>
+                    </select>
+                    <label for="">Category</label>
+                </div>
+                <div class="input-field">
+                    <textarea name="body" id="body" class="materialize-textarea"></textarea>
+                    <label for="body"></label>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <a href="" class="modal-action modal-close btn blue white-text">Submit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Footer -->
+    {% include 'app/footer.html' %}
 {% endblock %}

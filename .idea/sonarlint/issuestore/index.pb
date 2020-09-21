@@ -42,3 +42,15 @@ C
 static/css/main.css,1/d/1d911fa3e8e9e880e642b3cfb08a49276784f29a
 K
 app/templates/app/base.html,9/3/934f56b3dd12b43501a35680d068fb4b9a533d66
+B
+static/js/chart.js,5/0/50dae8d181f29f1064800d07fe8cfcdea7f1ad67
+O
+app/templates/app/visitors.html,e/1/e158853f70c604b98c7bfd47cf68ea1ddbdd7c82
+R
+"app/templates/app/posts_todos.html,1/f/1f0a9c23f11d71643b880977ced7f6cdb2f2dc71
+M
+app/templates/app/footer.html,7/c/7c6acd8c3dc5a371f62379bd0b3a9f6abeb0ca7a
+T
+$app/templates/app/action_button.html,1/a/1ad2536c0a1f18275eaf528765eaa587646186ba
+D
+static/js/nginx.conf,f/f/ff56192c86fd93ffd077ba2e337b4107486dd4c9

@@ -63,3 +63,11 @@ def logout(request):
         "message": "From Logout Page"
     }
     return render(request, "app/logout.html", context)
+
+
+def details(request):
+    context = {
+        "title": "Details Page",
+        "message": "From Details Page"
+    }
+    return render(request, "app/details.html", context)
