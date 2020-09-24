@@ -54,3 +54,5 @@ T
 $app/templates/app/action_button.html,1/a/1ad2536c0a1f18275eaf528765eaa587646186ba
 D
 static/js/nginx.conf,f/f/ff56192c86fd93ffd077ba2e337b4107486dd4c9
+N
+app/templates/app/details.html,5/4/54c04440f566246db8d3bd1f6aed743a23281f7c

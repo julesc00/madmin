@@ -2,8 +2,187 @@
 {% load static %}
 
 {% block content %}
-    <!-- Section: Other -->
 
+    <!-- Section: Users -->
+    <section class="section section-users grey lighten-4">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Users</span>
+                        <table class="striped">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Registered</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/moi.png' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Julio Briones
+                            </td>
+                            <td>
+                                contact@jdevs.mx
+                            </td>
+                            <td>
+                                Jul, 03 2020
+                            </td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/person1.jpg' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Benito Briones
+                            </td>
+                            <td>
+                                benito@jdevs.mx
+                            </td>
+                            <td>
+                                Aug, 05 2020
+                            </td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/person2.jpg' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Charbel Briones
+                            </td>
+                            <td>
+                                charbel@jdevs.mx
+                            </td>
+                            <td>
+                                Sep, 18 2020
+                            </td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/person3.jpg' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Jane Doe
+                            </td>
+                            <td>
+                                janedoe@jdevs.mx
+                            </td>
+                            <td>
+                                Sep, 23 2020
+                            </td>
+                            <td>
+                                <a href="{% url 'app:details' %}" class="btn blue lighten-2">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="card-action">
+                        <ul class="pagination">
+                            <li class="disabled">
+                                <a href="#" class="blue-text">
+                                    <i class="material-icons">chevron_left</i>
+                                </a>
+                            </li>
+                            <li class="active blue lighten-2">
+                                <a href="#" class="white-text">1</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">2</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 
-    <h1>{{ message }}</h1>
+    <!-- Section: Action Button -->
+    <div class="fixed-action-btn">
+        <a href="#user-modal" class="modal-trigger btn-floating btn-large red">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+    <!-- Section: Add User Post Modal -->
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <h4>Add User</h4>
+            <form action="">
+                <div class="input-field">
+                    <input type="text" id="name">
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password2">
+                    <label for="password2">Confirm Password</label>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <a href="" class="modal-action modal-close btn blue white-text">Submit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Footer -->
+    {% include 'app/footer.html' %}
+
 {% endblock %}

@@ -2,8 +2,132 @@
 {% load static %}
 
 {% block content %}
-    <!-- Section: Other -->
+
+    <!-- Section: Comments -->
+    <section class="section section-comments grey lighten-4">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Comments</span>
+                        <table class="striped">
+                        <tbody>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/moi.png' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, laudantium?
+                            </td>
+                            <td>
+                                <a href="" class="green-text">
+                                    <i class="material-icons">done</i>
+                                </a>
+                                <a href="" class="red-text">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/person3.jpg' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, laudantium?
+                            </td>
+                            <td>
+                                <a href="" class="green-text">
+                                    <i class="material-icons">done</i>
+                                </a>
+                                <a href="" class="red-text">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/person2.jpg' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, laudantium?
+                            </td>
+                            <td>
+                                <a href="" class="green-text">
+                                    <i class="material-icons">done</i>
+                                </a>
+                                <a href="" class="red-text">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="70">
+                                <img
+                                        src="{% static 'images/person4.jpg' %}"
+                                        alt=""
+                                        class="responsive circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, laudantium?
+                            </td>
+                            <td>
+                                <a href="" class="green-text">
+                                    <i class="material-icons">done</i>
+                                </a>
+                                <a href="" class="red-text">
+                                    <i class="material-icons">close</i>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="card-action">
+                        <ul class="pagination">
+                            <li class="disabled">
+                                <a href="#" class="blue-text">
+                                    <i class="material-icons">chevron_left</i>
+                                </a>
+                            </li>
+                            <li class="active blue lighten-2">
+                                <a href="#" class="white-text">1</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">2</a>
+                            </li>
+                            <li class="waves-effect">
+                                <a href="#" class="blue-text">
+                                    <i class="material-icons">chevron_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 
 
-    <h1>{{ message }}</h1>
+    <!-- Section Footer -->
+    {% include 'app/footer.html' %}
+
 {% endblock %}
