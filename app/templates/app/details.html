@@ -2,10 +2,64 @@
 {% load static %}
 
 {% block content %}
-    <!-- Section: Other -->
-
-
-    <h1>{{ message }}</h1>
+    <!-- Section: Details -->
+    <section class="section section-details grey lighten-4">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <span class="card-title">Post Details</span>
+                            </div>
+                            <div class="col s12 m6 center">
+                                <img
+                                        src="{% static 'images/moi.png' %}"
+                                        alt=""
+                                        class="responsive-img circle"
+                                        style="width: 40px; margin-left: 10px;"
+                                >
+                                <p>Posted By Julio Briones</p>
+                                <p>On Sep, 12 2020</p>
+                            </div>
+                        </div>
+                        <form action="">
+                            <div class="input-field">
+                                <input type="text" id="title" value="Post One">
+                                <label for="title">Title</label>
+                            </div>
+                            <div class="input-field">
+                                <select name="" id="">
+                                    <option value="" disabled>Select Option</option>
+                                    <option value="1">Web Development</option>
+                                    <option value="2" selected>Tech Development</option>
+                                    <option value="3">App Development</option>
+                                    <option value="4">Graphic Design</option>
+                                    <option value="5">Tech & Security Tutoring</option>
+                                    <option value="6">Performance & Security Assessment</option>
+                                </select>
+                                <label for="">Category</label>
+                            </div>
+                            <div class="input-field">
+                                <textarea
+                                        name="body"
+                                        id="body"
+                                        class="materialize-textarea"
+                                > This is the content for post one.
+                                </textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-action center">
+                        <button class="btn red btn-extended" style="width: 45%; display: inline-block">Delete</button>
+                        <button class="btn green btn-extended" style="width: 45%; display: inline-block">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
 
     <!-- Section Footer -->
     {% include 'app/footer.html' %}
